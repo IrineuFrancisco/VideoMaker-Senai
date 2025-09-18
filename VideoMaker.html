@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        img{
+            width: 300px;
+            padding-left: 40%;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #000;
+        }
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="data:image/png;base64,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" alt="">
+    <div class="container">
+        <h1>Estratégia de Curso: Editor de Vídeo (Videomaker)</h1>
+
+        <p>Com certeza! Aqui está uma proposta de estratégia para ministrar o curso de Editor de Vídeo (Videomaker) do SENAI, dividida em aulas de 4 horas por dia, com base no conteúdo programático fornecido:</p>
+
+        
+
+        <h2>Estratégia de Curso: Editor de Vídeo (Videomaker) - Aulas de 4h/dia</h2>
+        <ul>
+            <li><strong>Carga Horária Total:</strong> 60 horas (equivalente a 15 dias de aula de 4 horas)</li>
+            <li><strong>Formato:</strong> Aulas teóricas e práticas, com forte foco em exercícios e projetos.</li>
+        </ul>
+
+        
+
+        <div class="week-section">
+            <h2>Módulo 1: Fundamentos da Edição de Vídeo</h2>
+
+            <div class="day-section" onclick="(window.location='introducao.html')">
+                <h3>Dia 1: Introdução e Primeiros Passos na Edição (4 horas)</h3>
+                <ul>
+                    <li><strong>Boas-vindas e Apresentação do Curso:</strong> Objetivos, clientela, requisitos.</li>
+                    <li><strong>Introdução à Edição de Vídeo:</strong> O que é ser um videomaker, o papel do editor, fluxo de trabalho.</li>
+                    <li><strong>Visão Geral do Software de Edição:</strong> Interface, organização do espaço de trabalho (painéis, janelas).</li>
+                    <li><strong>Captura e Importação:</strong> Diferentes formatos de mídia, como importar vídeos, áudios e imagens para o projeto.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Importar mídias fornecidas e organizar o projeto.</li>
+                </ul>
+            </div>
+           
+
+            <div class="day-section" onclick="(window.location='introducao.html')">
+                <h3>Dia 2: Montagem Básica e Organização (4 horas)</h3>
+                <ul>
+                    <li><strong>Edição de Vídeo (Montagem):</strong> Adicionar clipes à timeline, cortar, remover partes indesejadas.</li>
+                    <li><strong>Duração, Velocidade e Direção:</strong> Ajustar a duração dos clipes, alterar a velocidade (câmera lenta/rápida), inverter clipes.</li>
+                    <li><strong>Organização da Timeline:</strong> Tracks de vídeo e áudio, organizar clipes de forma eficiente.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Criar uma sequência de vídeo simples com os clipes importados, ajustando durações e velocidades.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 3: Transições e Fluxo Visual (4 horas)</h3>
+                <ul>
+                    <li><strong>Transições:</strong> Tipos de transições (cortes secos, dissolve, wipes), quando e como usá-las.</li>
+                    <li><strong>Aplicação e Ajuste de Transições:</strong> Personalizar parâmetros das transições.</li>
+                    <li><strong>Transparência:</strong> Introdução ao conceito de opacidade e modos de mesclagem básicos.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Refinar a sequência criada no dia anterior, adicionando transições variadas e explorando a transparência em alguns elementos.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 4: Áudio Essencial para Vídeo (4 horas)</h3>
+                <ul>
+                    <li><strong>Fundamentos de Áudio:</strong> Importância do áudio no vídeo, tipos de áudio (música, fala, efeitos sonoros).</li>
+                    <li><strong>Edição de Áudio:</strong> Ajustar volumes, fade in/out, cortar e mover clipes de áudio.</li>
+                    <li><strong>Sincronização de Áudio e Vídeo:</strong> Como garantir que o áudio esteja em sintonia com a imagem.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Adicionar trilha sonora e efeitos sonoros à sequência de vídeo, ajustando seus níveis e sincronização.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 5: Introdução aos Efeitos Visuais (4 horas)</h3>
+                <ul>
+                    <li><strong>Efeitos do Vídeo (Básicos):</strong> Correção de cor e luz (introdução), filtros e ajustes pré-definidos.</li>
+                    <li><strong>Aplicação de Efeitos:</strong> Como aplicar e ajustar efeitos nos clipes.</li>
+                    <li><strong>Entendendo Keyframes:</strong> Introdução à animação de parâmetros de efeitos ao longo do tempo.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Aplicar efeitos visuais básicos para melhorar a imagem dos clipes e experimentar com keyframes em um efeito simples.</li>
+                </ul>
+            </div>
+        </div> <!-- End of Week 1 -->
+
+       
+
+        <div class="week-section">
+            <h2>Módulo  2: Aprimoramento e Elementos Visuais</h2>
+
+            <div class="day-section">
+                <h3>Dia 6: Títulos e Legendas Criativos (4 horas)</h3>
+                <ul>
+                    <li><strong>Títulos e Legendas:</strong> Criação de títulos de abertura, terços inferiores e legendas.</li>
+                    <li><strong>Propriedades de Texto:</strong> Fontes, tamanhos, cores, alinhamento, estilos.</li>
+                    <li><strong>Animação de Texto:</strong> Animar a entrada e saída de títulos.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Criar um título de abertura para um projeto e adicionar um terço inferior com informações relevantes.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 7: O Poder do Lettering (4 horas)</h3>
+                <ul>
+                    <li><strong>As Vantagens do Lettering:</strong> Como o lettering pode enriquecer a comunicação visual do vídeo.</li>
+                    <li><strong>Aplicações do Lettering:</strong> Exemplos de uso em vídeos (tutoriais, comerciais, vlogs).</li>
+                    <li><strong>Introdução ao Design de Lettering:</strong> Princípios básicos para criar lettering eficaz.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Desenvolver um lettering simples para uma mensagem chave do vídeo, explorando cores e posições.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 8: Tipografia e Marcações (4 horas)</h3>
+                <ul>
+                    <li><strong>Tipografia:</strong> Escolha de fontes e sua influência na mensagem, hierarquia tipográfica.</li>
+                    <li><strong>Marcações (Markers):</strong> Uso de marcadores na timeline para organizar o trabalho, identificar pontos importantes e sincronizar elementos.</li>
+                    <li><strong>Revisão de Títulos e Legendas:</strong> Refinar os títulos e legendas usando princípios de tipografia.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Aplicar marcadores na timeline do projeto para indicar pontos de corte ou entrada de texto, e ajustar a tipografia dos elementos criados.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 9: Acabamento e Refinamento Final (4 horas)</h3>
+                <ul>
+                    <li><strong>Acabamento:</strong> Revisão geral do vídeo, identificação de erros, ajustes finos de transições e efeitos.</li>
+                    <li><strong>Consistência Visual e Sonora:</strong> Garantir que o vídeo tenha uma estética coesa.</li>
+                    <li><strong>Introdução à Correção de Cor (avançada):</strong> Curvas, color wheels (conceitos básicos para o acabamento).</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Realizar uma revisão completa do projeto, aplicando ajustes de acabamento e correção de cor leve.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 10: Exportação e Distribuição (4 horas)</h3>
+                <ul>
+                    <li><strong>Exportação:</strong> Parâmetros de exportação (formatos, codecs, resolução, bitrate).</li>
+                    <li><strong>Otimização para Diferentes Plataformas:</strong> YouTube, Instagram, Vimeo, web.</li>
+                    <li><strong>Fechamento de Arquivo:</strong> Boas práticas para salvar e arquivar projetos.</li>
+                    <li class="atividade"><strong>Exercício Prático:</strong> Exportar o projeto final em diferentes configurações para demonstrar a variação na qualidade e tamanho do arquivo.</li>
+                </ul>
+            </div>
+        </div> <!-- End of Week 2 -->
+
+       
+
+        <div class="week-section">
+            <h2>Módulo  3: Projeto Final e Revisão</h2>
+
+            <div class="day-section">
+                <h3>Dia 11: Planejamento do Projeto Final (4 horas)</h3>
+                <ul>
+                    <li><strong>Briefing do Projeto Final:</strong> Apresentação de um tema ou requisitos para um vídeo a ser criado pelos alunos (ex: um pequeno documentário, um clipe promocional, um vlog).</li>
+                    <li><strong>Discussão em Grupo:</strong> Brainstorming de ideias, planejamento da narrativa, shot list.</li>
+                    <li><strong>Recursos Disponíveis:</strong> Fornecer ou orientar os alunos na busca por mídias (vídeos, imagens, áudios) para o projeto.</li>
+                    <li class="atividade"><strong>Atividade:</strong> Desenvolver o roteiro ou plano de edição para o projeto final.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 12: Desenvolvimento do Projeto Final - Parte 1 (4 horas)</h3>
+                <ul>
+                    <li><strong>Início da Edição:</strong> Os alunos começam a montar seus projetos finais.</li>
+                    <li><strong>Suporte Individualizado:</strong> O instrutor circula, tirando dúvidas e oferecendo feedback personalizado.</li>
+                    <li><strong>Foco:</strong> Importação, montagem básica, organização da timeline.</li>
+                    <li class="atividade"><strong>Atividade:</strong> Montar a estrutura principal do projeto final.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 13: Desenvolvimento do Projeto Final - Parte 2 (4 horas)</h3>
+                <ul>
+                    <li><strong>Continuação da Edição:</strong> Adição de transições, ajustes de áudio, primeiros efeitos.</li>
+                    <li><strong>Revisão em Pares:</strong> Os alunos podem trocar projetos e dar feedback entre si.</li>
+                    <li><strong>Foco:</strong> Refinamento visual e sonoro.</li>
+                    <li class="atividade"><strong>Atividade:</strong> Adicionar elementos como transições, trilha sonora e efeitos básicos ao projeto final.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 14: Desenvolvimento do Projeto Final - Parte 3 (4 horas)</h3>
+                <ul>
+                    <li><strong>Finalização dos Detalhes:</strong> Inserção de títulos, legendas, lettering, correção de cor final.</li>
+                    <li><strong>Testes de Exportação:</strong> Os alunos realizam testes para garantir que o vídeo será exportado corretamente.</li>
+                    <li><strong>Foco:</strong> Polimento e acabamento final.</li>
+                    <li class="atividade"><strong>Atividade:</strong> Adicionar textos, ajustar cores e preparar o vídeo para a exportação.</li>
+                </ul>
+            </div>
+
+            <div class="day-section">
+                <h3>Dia 15: Apresentação dos Projetos e Encerramento (4 horas)</h3>
+                <ul>
+                    <li><strong>Apresentação dos Projetos Finais:</strong> Cada aluno apresenta seu vídeo para a turma.</li>
+                    <li><strong>Sessão de Feedback:</strong> Discussão construtiva sobre os projetos, pontos fortes e áreas para melhoria.</li>
+                    <li><strong>Revisão Geral do Conteúdo:</strong> Dúvidas finais, dicas para o futuro.</li>
+                    <li><strong>Encerramento do Curso:</strong> Certificados (se aplicável), próximos passos na carreira de videomaker.</li>
+                    <li class="atividade"><strong>Atividade:</strong> Apresentação e discussão dos projetos.</li>
+                </ul>
+            </div>
+        </div> <!-- End of Week 3 -->
+
+       
+<!-- 
+        <h2>Recursos e Materiais:</h2>
+        <ul>
+            <li><strong>Sala de aula e oficinas:</strong> Espaço adequado com computadores equipados com software de edição de vídeo (ex: Adobe Premiere Pro, DaVinci Resolve, Kdenlive).</li>
+            <li><strong>Apostila:</strong> Material didático impresso ou digital com o conteúdo do curso.</li>
+            <li><strong>Recursos audiovisuais:</strong> Projetor, tela, caixas de som para demonstrações.</li>
+            <li><strong>Máquinas e equipamentos:</strong> Computadores com especificações adequadas para edição de vídeo, monitores de boa qualidade.</li>
+            <li><strong>Mídias de exemplo:</strong> Vídeos, áudios e imagens para os exercícios práticos.</li>
+        </ul>
+
+        <h2>Pré-Requisitos do Instrutor:</h2>
+        <ul>
+            <li>Profissional técnico com formação e experiência na área de edição de vídeo e produção audiovisual.</li>
+            <li>Conhecimento aprofundado do software de edição utilizado.</li>
+            <li>Habilidade para transmitir conhecimento de forma didática e prática.</li>
+        </ul>
+
+        <h2>Considerações Adicionais:</h2>
+        <ul>
+            <li><strong>Flexibilidade:</strong> Esta é uma sugestão de cronograma. O instrutor deve ter flexibilidade para ajustar o ritmo das aulas conforme o desenvolvimento da turma.</li>
+            <li><strong>Projetos Práticos:</strong> Enfatizar a prática desde o primeiro dia, incentivando os alunos a "colocarem a mão na massa".</li>
+            <li><strong>Feedback Contínuo:</strong> Fornecer feedback constante para que os alunos possam melhorar suas habilidades.</li>
+            <li><strong>Inspiração:</strong> Apresentar exemplos de bons vídeos, discutir tendências e inspirar os alunos.</li>
+        </ul> -->
+
+      
+    </div>
+</body>
+</html>
