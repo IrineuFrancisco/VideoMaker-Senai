@@ -13,8 +13,8 @@
             color: #333;
         }
         img{
-            width: 300px;
-            padding-left: 40%;
+            /* width: 300px; */
+            /* padding-left: 40%; */
         }
         .container {
             max-width: 900px;
@@ -24,7 +24,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4{
             color: #ff2e2e;
             border-bottom: 2px solid #eee;
             padding-bottom: 5px;
@@ -54,6 +54,58 @@
         strong {
             color: #000;
         }
+
+         .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+          .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+         img {
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
         .day-section {
             background-color: #024c7725;
             border-left: 5px solid #ff2e2e;
@@ -74,14 +126,170 @@
     </style>
 </head>
 <body>
-    <img src="data:image/png;base64,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" alt="">
+    <img src="img/senai.png" alt="">
     <div class="container">
         <div class="voltar" onclick="(window.location='index.html')">
             <h2>Voltar</h1>
         </div>
          <h1>Dia 1: Introdução e Primeiros Passos na Edição</h1>
 
-        <p>Com certeza! Aqui está uma proposta de estratégia para ministrar o curso de Editor de Vídeo (Videomaker) do SENAI, dividida em aulas de 4 horas por dia, com base no conteúdo programático fornecido:</p>
+        <h3>Objetivos de Aprendizagem:</h3>
+        <p>Ao final desta aula, os alunos serão capazes de:</p>
+        <ul>
+            <li>Compreender o papel do editor de vídeo e o fluxo de trabalho básico de uma produção audiovisual.</li>
+            <li>Identificar as principais áreas da interface de um software de edição.</li>
+            <li>Importar diferentes tipos de mídias para um projeto.</li>
+            <li>Organizar o projeto de forma eficiente.</li>
+        </ul>
+
+
+           <div class="part-section">
+            <h2>Parte 1:Introdução</h2>
+
+          
+
+            <h3>O Que é ser um Videomaker/Editor de Vídeo?</h3>
+            <ul>
+                <li><strong>Definição:</strong> Um profissional que dá forma e narrativa a gravações brutas. Transforma clipes soltos em uma história coesa e impactante.</li>
+                <li><strong>Não é só cortar e colar:</strong> É contar uma história, criar emoção, informar, persuadir.</li>
+                <li><strong>Habilidades essenciais:</strong> Olhar crítico, criatividade, organização, paciência, conhecimento técnico.</li>
+                <li><strong>Áreas de atuação:</strong> Cinema, TV, publicidade, mídias sociais, eventos, documentários, corporativos, etc.</li>
+                <li><strong>Exemplos:</strong> Mostrar trechos curtos de vídeos com estilos de edição diferentes (um comercial dinâmico, um vlog, uma cena de filme).</li>
+            </ul>
+
+            <h3>O Fluxo de Trabalho de Produção Audiovisual</h3>
+            <ul>
+                <li><strong>Conceito:</strong> As etapas que um projeto de vídeo geralmente segue.</li>
+                <li><strong>Pré-produção:</strong> Ideia, roteiro, planejamento, equipamentos.</li>
+                <li><strong>Produção (Gravação):</strong> Captura das imagens e áudios.</li>
+                <li><strong>Pós-produção (Edição):</strong> Onde entra o editor! Organização, montagem, efeitos, áudio, cor.</li>
+                <li><strong>Distribuição:</strong> Publicação (YouTube, redes sociais, cinema, TV).</li>
+               <li><strong>Diagrama visual do fluxo:</strong>
+                    <img class="card" src="img/00.png" alt="Diagrama de Fluxo de Trabalho Audiovisual">
+                    <div class="image-caption">Diagrama: Etapas do Fluxo de Trabalho Audiovisual.</div>
+                </li>
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 2: Visão Geral do Software de Edição (1 hora e 15 minutos)</h2>
+
+            <h3>Introdução ao Software de Edição (15 min)</h3>
+            <ul>
+                <li>Explicar qual software será usado no curso (ex: Adobe Premiere Pro ou DaVinci Resolve) e por quê.</li>
+                <li><strong>Conceito:</strong> O software é nossa "mesa de trabalho" digital.</li>
+                <li>Abrir o software e mostrar a tela inicial.</li>
+            </ul>
+
+            <h3>Interface Principal: Painéis e Janelas (45 min)</h3>
+            <ul>
+                <li><strong>Conceito:</strong> A interface é dividida em diferentes áreas, cada uma com uma função específica.</li>
+                <li>Demonstração prática no software, explicando cada painel principal:
+                    <ul>
+                        <li><strong>Painel de Projeto (Project Panel/Media Pool):</strong> Onde importamos e organizamos todos os nossos arquivos (vídeos, áudios, imagens, gráficos). É como uma pasta de arquivos.
+                            <img src="img/01.png" alt="Painel de Projeto">
+                            <div class="image-caption">Exemplo de um Painel de Projeto (Project Panel/Media Pool).</div>
+                        </li>
+                        <li><strong>Monitor de Origem (Source Monitor):</strong> Onde visualizamos os clipes individuais antes de colocá-los na timeline. Usado para marcar pontos de entrada (In) e saída (Out).
+                            <img src="img/02.png" alt="Monitor de Origem">
+                            <div class="image-caption">Exemplo de um Monitor de Origem.</div>
+                        </li>
+                        <li><strong>Timeline (Sequence Panel):</strong> O coração da edição! É onde montamos a sequência do vídeo, organizando os clipes em ordem, adicionando áudio, transições e efeitos.
+                            <img src="img/03.png" alt="Timeline (Sequence Panel)">
+                            <div class="image-caption">Exemplo de uma Timeline (Sequence Panel).</div>
+                        </li>
+                        <li><strong>Monitor de Programa (Program Monitor):</strong> Onde visualizamos o resultado final da nossa edição na timeline.
+                            <img src="img/04.png" alt="Monitor de Programa">
+                            <div class="image-caption">Exemplo de um Monitor de Programa.</div>
+                        </li>
+                        <li>Outros painéis importantes (breve menção): Efeitos, Áudio Mixer, etc.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Configuração do Projeto e Sequência (15 min)</h3>
+            <ul>
+                <li><strong>Conceito de Projeto:</strong> O arquivo principal que guarda todas as informações sobre a sua edição.</li>
+                <li><strong>Conceito de Sequência:</strong> A "linha do tempo" específica onde você monta o seu vídeo. Um projeto pode ter várias sequências.</li>
+                <li>Demonstrar como criar um novo projeto e uma nova sequência, explicando as configurações básicas (resolução, taxa de quadros - frame rate).</li>
+                <li><strong>Importante:</strong> Salvar o projeto regularmente!</li>
+            </ul>
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 3: Captura, Importação e Organização (1 hora e 30 minutos)</h2>
+
+            <h3>Tipos de Mídia no Contexto da Edição (15 min)</h3>
+            <ul>
+                <li><strong>Conceito:</strong> Vídeos, áudios (músicas, voz, efeitos), imagens (fotos, gráficos), etc.</li>
+                <li><strong>Formatos Comuns:</strong> MP4, MOV, WAV, MP3, JPG, PNG. Breve explicação sobre codecs (não aprofundar muito, só o básico).</li>
+                <li><strong>Importância da Qualidade:</strong> Mídias de boa qualidade facilitam a edição.</li>
+            </ul>
+
+            <h3>Importação de Mídias (30 min)</h3>
+            <ul>
+                <li><strong>Métodos de Importação:</strong>
+                    <ul>
+                        <li>Arrastar e soltar do explorador de arquivos/Finder para o Painel de Projeto.</li>
+                        <li>Usar o menu "Arquivo > Importar".</li>
+                        <li>Painel "Mídia" ou "Source Browser" (se aplicável ao software).</li>
+                    </ul>
+                </li>
+                <li><strong>Demonstração Prática:</strong> O instrutor importa vídeos, áudios e imagens de uma pasta pré-definida.</li>
+                <li><strong>Atenção:</strong> Mídias importadas não são "copiadas" para o projeto, o software apenas cria um "link". Se mover ou deletar o arquivo original, ele ficará offline no projeto.
+                    <img src="img/05.png" alt="Painel de Projeto Ilustrado">
+                    <div class="image-caption">O Painel de Projeto é onde se organizam todas as mídias.</div>
+                </li>
+            </ul>
+
+            <h3>Organização do Projeto (45 min)</h3>
+            <ul>
+                <li><strong>Conceito:</strong> Manter o Painel de Projeto organizado é crucial para um fluxo de trabalho eficiente, especialmente em projetos grandes.</li>
+                <li><strong>Pastas/Bins:</strong> Criar pastas (chamadas "bins" em alguns softwares) para diferentes tipos de mídia: Vídeos, Áudios, Imagens, Sequências, Gráficos, etc.</li>
+                <li><strong>Nomeclatura:</strong> Padrões de nomeação claros para clipes e sequências.</li>
+                <li><strong>Demonstração Prática:</strong> Organizar as mídias importadas em pastas dentro do Painel de Projeto.</li>
+                <li><strong>Exemplo visual de um Painel de Projeto organizado:</strong>
+                    <img src="img/06.png" alt="Painel de Projeto Organizado">
+                    <div class="image-caption">Exemplo de um Painel de Projeto bem organizado com pastas.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 4: Exercício Prático e Dúvidas (30 minutos)</h2>
+
+            <div class="exercise">
+                <h3>Exercício Prático (20 min)</h3>
+                <p>Cada aluno deve:</p>
+                <ol>
+                    <li>Abrir o software de edição.</li>
+                    <li>Criar um novo projeto e uma nova sequência.</li>
+                    <li>Importar um conjunto de mídias fornecidas (uma pasta com vídeos curtos, alguns arquivos de áudio e algumas imagens).</li>
+                    <li>Criar pastas ("bins") no Painel de Projeto (ex: "Videos Brutos", "Audios", "Imagens") e organizar as mídias importadas nelas.</li>
+                    <li>Salvar o projeto.</li>
+                </ol>
+                <p>O instrutor circula, auxiliando individualmente.</p>
+            </div>
+
+            <h3>Dúvidas e Encerramento (10 min)</h3>
+            <ul>
+                <li>Abrir para perguntas gerais.</li>
+                <li>Reforçar os conceitos aprendidos (papel do editor, interface, importação, organização).</li>
+                <li>Dar uma prévia do conteúdo da próxima aula (montagem básica).</li>
+                <li>Incentivar a exploração do software em casa, se possível.</li>
+            </ul>
+        </div>
+
+        <p>---</p>
+
+        <div class="materials">
+            <h2>Materiais de Apoio para a Aula 1:</h2>
+            <ul>
+                <li><strong>Apresentação:</strong> Slides com os tópicos da aula, diagramas de fluxo, exemplos visuais da interface do software, exemplos de boa organização.</li>
+                <li><strong>Pasta de Mídias para Exercício:</strong> Uma pasta compactada com 5-10 clipes de vídeo curtos (10-30s cada), 2-3 arquivos de áudio (música e efeito), e 2-3 imagens. Nomear de forma genérica para que os alunos possam organizar.</li>
+                <li><strong>Computadores:</strong> Com o software de edição instalado e funcionando.</li>
+                <li><strong>Conexão à Internet:</strong> Para mostrar exemplos online (opcional).</li>
+            </ul>
+        </div>
 
       
 
