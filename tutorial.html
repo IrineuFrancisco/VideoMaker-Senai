@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url("img/background1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* img{
+            width: 300px;
+            padding-left: 40%;
+        } */
+        .container {
+            /* max-width: 900px; */
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/senai.png" alt="" style="width: 300px; cursor: pointer;" onclick="(window.location='index.html')">
+    <div class="container" style="width:80%;">
+        <div class="voltar" style="cursor: pointer;" onclick="(window.location='introducao.html')">
+            <h2>Voltar</h1>
+        </div>
+        <h1>Parte 2: Visão Geral do Software de Edição</h1>
+
+        <h3>Objetivos de Aprendizagem:</h3>
+        <p>Ao final desta aula, os alunos serão capazes de:</p>
+        <ul>
+            <li>Compreender o papel do editor de vídeo e o fluxo de trabalho básico de uma produção audiovisual.</li>
+            <li>Identificar as principais áreas da interface de um software de edição.</li>
+            <li>Importar diferentes tipos de mídias para um projeto.</li>
+            <li>Organizar o projeto de forma eficiente.</li>
+        </ul>
+
+
+        <div class="part-section" style="cursor: pointer;" onclick="(window.location='introP1.html')">
+            <h2>Parte 1: Instalação e Configuração Inicial</h2>
+            <ol>
+                <li>
+                    <strong>Download:</strong> Vá para o site oficial da Blackmagic Design (os criadores do DaVinci
+                    Resolve) e baixe a versão gratuita ("DaVinci Resolve Free"). Escolha a versão correta para o seu
+                    sistema operacional (Windows, macOS, Linux).
+                </li>
+                <li>
+                    <strong>Instalação:</strong> Execute o instalador e siga as instruções. É um processo padrão.
+                </li>
+                <li>
+                    <strong>Primeira Abertura:</strong> Ao abrir o DaVinci Resolve pela primeira vez, ele pode solicitar
+                    algumas configurações de projeto ou hardware. Você pode aceitar as configurações padrão para
+                    começar.
+                </li>
+            </ol>
+            <img src="img/paginaDaVinci.png" style=" width: 100%;">
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 2: Entendendo a Interface (As "Pages")</h2>
+            <p>O DaVinci Resolve é organizado em "Pages" (páginas), cada uma dedicada a uma etapa do processo de
+                pós-produção. Você as verá na parte inferior da tela:
+            </p>
+            <ul>
+                <li><strong>Media Page (Mídia):</strong> Para importar e organizar seus clipes.</li>
+                <li><strong>Cut Page (Corte):</strong> Uma página rápida para montagem e corte de clipes.</li>
+                <li><strong>Edit Page (Edição):</strong> A principal página de edição, com uma timeline mais tradicional
+                    e ferramentas avançadas.</li>
+                <li><strong>Fusion Page (Fusão):</strong> Para efeitos visuais e motion graphics complexos.</li>
+                <li><strong>Color Page (Cor):</strong> Onde você fará a correção de cor e o color grading (um dos pontos
+                    fortes do Resolve!).</li>
+                <li><strong>Fairlight Page (Áudio):</strong> Para mixagem e edição de áudio.</li>
+                <li><strong>Deliver Page (Entrega):</strong> Para renderizar e exportar seu projeto final.</li>
+            </ul>
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 3: Começando um Projeto</h2>
+            <ol>
+                <li>
+                    <strong>Novo Projeto:</strong> Na tela inicial do DaVinci Resolve, clique em "New Project" (Novo
+                    Projeto). Dê um nome ao seu projeto e clique em "Create" (Criar).
+                </li>
+            </ol>
+
+        </div>
+
+        <div class="part-section">
+            <h2>Parte 4: Importando Mídia (Media Page)</h2>
+            <ol>
+                <li>
+                    <strong>Acesse a Media Page:</strong> Clique no ícone da "Media Page" na parte inferior.
+                </li>
+                <li>
+                    <strong>Importar:</strong> No painel "Media Storage" (Armazenamento de Mídia) à esquerda, navegue
+                    até a pasta onde seus arquivos de vídeo e áudio estão.
+                </li>
+                <li>
+                    <strong>Arraste e Solte:</strong> Arraste os arquivos que deseja usar para o painel "Media Pool"
+                    (Piscina de Mídia) na parte inferior do centro. Você também pode clicar com o botão direito no
+                    "Media Pool" e escolher "Import Media".
+                </li>
+            </ol>
+        </div>
+
+        <div class="part-section">
+
+            <h2>Parte 5: Edição Básica (Edit Page)</h2>
+            <ol>
+                <li>
+                    <strong>Acesse a Edit Page:</strong> Clique no ícone da "Edit Page" na parte inferior.
+                </li>
+                <li>
+                    <strong>Criar uma Timeline:</strong> Arraste um clipe do "Media Pool" para a área vazia da timeline
+                    no centro da tela. O Resolve criará automaticamente uma timeline com base nas configurações desse
+                    clipe.
+                </li>
+                <li>
+                    <strong>Adicionar Clipes:</strong> Continue arrastando outros clipes para a timeline, organizando-os
+                    na ordem desejada.
+                </li>
+                <li>
+                    <strong>Cortar Clipes:</strong>
+                    <ul>
+                        <li>Posicione o "playhead" (a linha vertical vermelha) onde você quer fazer um corte.</li>
+                        <li>Use a ferramenta "Blade Edit Mode" (atalho <code>B</code>) para cortar o clipe. Clique no
+                            clipe com a lâmina para dividi-lo.</li>
+                        <li>Volte para a ferramenta "Selection Mode" (atalho <code>A</code>) para selecionar e mover as
+                            partes dos clipes.</li>
+                        <li>Selecione uma parte indesejada e pressione <code>Delete</code> para removê-la.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Ajustar Duração:</strong> Arraste as bordas dos clipes na timeline para encurtar ou estender
+                    sua duração.
+                </li>
+                <li>
+                    <strong>Adicionar Transições:</strong> No painel "Effects Library" (Biblioteca de Efeitos) no canto
+                    superior esquerdo, expanda "Video Transitions". Arraste uma transição (ex: "Cross Dissolve") entre
+                    dois clipes na timeline.
+                </li>
+            </ol>
+        </div>
+        <div class="part-section">
+            <h2>Parte 6: Correção de Cor (Color Page)</h2>
+            <ol>
+                <li>
+                    <strong>Acesse a Color Page:</strong> Clique no ícone da "Color Page" na parte inferior. Esta é a
+                    joia da cor do Resolve!
+                </li>
+                <li>
+                    <strong>Visualizando:</strong> No monitor à esquerda, você verá o clipe selecionado. À direita, você
+                    tem os "Nodes" (Nós) e vários painéis de ferramentas de cor.
+                </li>
+                <li>
+                    <strong>Correção Primária:</strong>
+                    <ul>
+                        <li><strong>Lift, Gamma, Gain (Rodas de Cores):</strong> Use as rodas de cores para ajustar as
+                            sombras (Lift), tons médios (Gamma) e realces (Gain). Arraste o ponto central para adicionar
+                            cor ou o círculo externo para ajustar o brilho.</li>
+                        <li><strong>Offset:</strong> Ajusta o brilho geral da imagem.</li>
+                        <li><strong>Contraste e Saturação:</strong> Encontre os controles de contraste e saturação para
+                            ajustar a "punch" e a intensidade das cores do seu clipe.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Usando Nodes:</strong> Pense nos nodes como camadas de ajustes. Para adicionar um novo node,
+                    clique com o botão direito na área de nodes e selecione "Add Serial Node". Cada node pode ter um
+                    ajuste diferente, o que permite um controle muito preciso.
+                </li>
+            </ol>
+        </div>
+        <div class="part-section">
+            <h2>Parte 7: Edição de Áudio Básica (Fairlight Page)</h2>
+            <ol>
+                <li>
+                    <strong>Acesse a Fairlight Page:</strong> Clique no ícone da "Fairlight Page" na parte inferior.
+                </li>
+                <li>
+                    <strong>Ajustar Volume:</strong> Na timeline, você verá uma linha no meio de cada clipe de áudio.
+                    Arraste-a para cima ou para baixo para aumentar ou diminuir o volume.
+                </li>
+                <li>
+                    <strong>Crossfades de Áudio:</strong> Arraste as bordas dos clipes de áudio para criar fades de
+                    entrada/saída ou crossfades automáticos entre clipes adjacentes.
+                </li>
+            </ol>
+
+        </div>
+        <div class="part-section">
+            <h2>Parte 8: Exportando Seu Projeto (Deliver Page)</h2>
+            <ol>
+                <li>
+                    <strong>Acesse a Deliver Page:</strong> Clique no ícone da "Deliver Page" na parte inferior.
+                </li>
+                <li>
+                    <strong>Configurações de Renderização:</strong>
+                    <ul>
+                        <li><strong>Filename (Nome do arquivo):</strong> Dê um nome ao seu vídeo final.</li>
+                        <li><strong>Location (Localização):</strong> Escolha onde salvar o arquivo.</li>
+                        <li><strong>Format (Formato):</strong> H.264 ou H.265 (MP4) são boas opções para upload na web.
+                        </li>
+                        <li><strong>Codec:</strong> H.264 é geralmente compatível com a maioria dos lugares.</li>
+                        <li><strong>Resolution (Resolução) e Frame Rate (Taxa de Quadros):</strong> Mantenha as
+                            configurações da sua timeline ou ajuste conforme necessário.</li>
+                        <li><strong>Quality (Qualidade):</strong> Escolha "Automatic" ou "Best".</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Adicionar à Render Queue:</strong> Clique em "Add to Render Queue" (Adicionar à Fila de
+                    Renderização) no canto inferior esquerdo.
+                </li>
+                <li>
+                    <strong>Iniciar Renderização:</strong> No painel "Render Queue" à direita, clique em "Start Render"
+                    (Iniciar Renderização). O Resolve processará seu vídeo e o salvará no local especificado.
+                </li>
+            </ol>
+        </div>
+
+        <p>---</p>
+
+    
+
+
+
+
+    </div>
+</body>
+
+</html>
