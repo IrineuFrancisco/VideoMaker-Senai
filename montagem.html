@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url("img/background1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* img{
+            width: 300px;
+            padding-left: 40%;
+        } */
+        .container {
+            /* max-width: 900px; */
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/senai.png" alt="" style="width: 300px; cursor: pointer;" onclick="(window.location='index.html')">
+    <div class="container" style="width:80%;">
+        <div class="voltar" style="cursor: pointer;" onclick="(window.location='index.html')">
+            <h2>Voltar</h1>
+        </div>
+        <h1>Aula 2: Montagem Básica e Organização</h1>
+
+        <h3>Objetivo:</h3>
+        <p>Familiarizar-se com as ferramentas de montagem e organização da timeline no DaVinci Resolve.</p>
+
+        <h3>Cenário:</h3>
+        <p>Você é um editor de vídeo novato encarregado de montar um pequeno teaser para um vlog de viagens. Você
+            recebeu alguns clipes brutos e precisa dar forma a eles.</p>
+        <ul>
+            <li>Familiarizar-se com as ferramentas de montagem e organização da timeline no DaVinci Resolve</li>
+            <li>Identificar as principais áreas da interface de um software de edição.</li>
+            <li>Importar diferentes tipos de mídias para um projeto.</li>
+            <li>Organizar o projeto de forma eficiente.</li>
+        </ul>
+
+
+
+        <div class="part-section">
+            <h2>Exercício Prático </h2>
+
+            <div class="exercise">
+                <h3>Exercício Prático</h3>
+                <p><strong>Objetivo:</strong> Familiarizar-se com as ferramentas de montagem e organização da timeline
+                    no DaVinci Resolve.</p>
+                <p><strong>Cenário:</strong> Você é um editor de vídeo novato encarregado de montar um pequeno teaser
+                    para um vlog de viagens. Você recebeu alguns clipes brutos e precisa dar forma a eles.</p>
+                <p><strong>Recursos:</strong></p>
+                <ol>
+                    <li>Uma gravação de uma paisagem natural (ex: montanhas, praia).</li>
+                    <li>Uma pessoa andando ou interagindo com um ambiente.</li>
+                    <li>Um close-up de um detalhe interessante (ex: flor, comida, objeto).</li>
+                    <li>Uma trilha sonora leve e inspiradora.</li>
+                    <p><a href="videos.html" target="_blank">Usar repositorios de imagens gratuitas.
+                    </a>
+                    </p>
+                </ol>
+                <p><strong>Passo 1: Preparação e Importação:</strong></p>
+                <ol>
+                    <li>Crie um novo projeto no DaVinci Resolve:** Dê o nome de "Teaser Vlog de Viagem".</li>
+                    <li>Importe os clipes para o Media Pool:</li>
+                    <ul>
+                        <li>Vá para a página "Media".</li>
+                        <li> Arraste e solte `Clip_A.mp4`, `Clip_B.mp4`, `Clip_C.mp4` e `Audio_Music.mp3` para o Media
+                            Pool.</li>
+                    </ul>
+                </ol>
+                <p><strong>Passo 2: Montagem Básica na Timeline</strong></p>
+                <ol>
+                    <li>Crie uma nova Timeline:</li>
+                    <ul>
+                        <li>Vá para a página "Edit"</li>
+                        <li>Clique com o botão direito no Media Pool e selecione "Timelines" > "Create New Timeline...".
+                        </li>
+                        <li>Dê o nome de "Teaser Inicial" e clique em "Create".</li>
+                    </ul>
+                    <li>Adicionar Clipes à Timeline:</li>
+                    <ul>
+                        <li> Arraste `Clip_A.mp4` para a trilha de vídeo V1 na timeline.</li>
+                        <li> Em seguida, arraste `Clip_B.mp4` e coloque-o logo após `Clip_A.mp4`.</li>
+                        <li>Por fim, arraste `Clip_C.mp4` e adicione-o após `Clip_B.mp4`.</li>
+                        <li> Arraste `Audio_Music.mp3` para a trilha de áudio A1, alinhando o início da música com o
+                            início do primeiro clipe de vídeo.</li>
+                    </ul>
+                </ol>
+                <p><strong>3: Cortar e Remover Partes Indesejadas</strong></p>
+                <ol>
+                    <li>Visualização e Pontos de Edição:
+                        <ul>
+                            <li>Reproduza a timeline para ter uma ideia do conteúdo.</li>
+                            <li>Use o playhead para navegar pelos clipes.</li>
+                        </ul>
+                    </li>
+                    <li>Removendo Partes Iniciais e Finais:
+                        <ul>
+                            <li>Clique no final de <code>Clip_A.mp4</code> na timeline. O cursor mudará para uma
+                                ferramenta de "corte" de borda.</li>
+                            <li>Arraste a borda do clipe para a esquerda para diminuir sua duração, removendo o final
+                                indesejado.</li>
+                            <li>Faça o mesmo no início de <code>Clip_B.mp4</code> para remover uma parte inicial que não
+                                ficou boa.</li>
+                        </ul>
+                    </li>
+                    <li>Cortando no Meio (Blade Tool):
+                        <ul>
+                            <li>Selecione a "Blade Edit Mode" (atalho <code>B</code>).</li>
+                            <li>Com o <code>Clip_B.mp4</code> selecionado, posicione o playhead em um ponto no meio do
+                                clipe onde você gostaria de fazer um corte.</li>
+                            <li>Clique na timeline para dividir o clipe em duas partes.</li>
+                            <li>Selecione a parte indesejada (ex: a segunda parte de <code>Clip_B.mp4</code>) e
+                                pressione <code>Delete</code> para removê-la.</li>
+                            <li>Selecione a "Selection Mode" (atalho <code>A</code>) para voltar ao modo normal de
+                                seleção.</li>
+                            <li>Arraste o clipe seguinte para preencher o espaço deixado, se necessário.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Passo 4: Ajustar Duração, Velocidade e Direção</strong></p>
+                <ol>
+                    <li>Ajustar Duração:
+                        <ul>
+                            <li>Ajuste as bordas de <code>Clip_A.mp4</code>, <code>Clip_B.mp4</code> e
+                                <code>Clip_C.mp4</code> até que o teaser tenha aproximadamente <strong>15-20
+                                    segundos</strong> de duração. Tente equilibrar o tempo de tela de cada clipe.</li>
+                        </ul>
+                    </li>
+                    <li>Alterar Velocidade (Câmera Lenta/Rápida):
+                        <ul>
+                            <li>Selecione <code>Clip_C.mp4</code>.</li>
+                            <li>Clique com o botão direito no clipe e selecione "Change Clip Speed...".</li>
+                            <li>No painel que aparece, altere a "Speed" para <strong>50%</strong> (câmera lenta). Marque
+                                a opção "Ripple Timeline" para que a duração do clipe se ajuste na timeline. Clique em
+                                "Change".</li>
+                            <li><em>Opcional:</em> Experimente fazer o mesmo com <code>Clip_A.mp4</code> para
+                                <strong>200%</strong> (câmera rápida) e observe o efeito.</li>
+                        </ul>
+                    </li>
+                    <li>Inverter Clipe:
+                        <ul>
+                            <li>Selecione <code>Clip_B.mp4</code>.</li>
+                            <li>Clique com o botão direito no clipe e selecione "Change Clip Speed...".</li>
+                            <li>Marque a opção "Reverse Speed". Certifique-se de que a velocidade esteja em 100%. Clique
+                                em "Change".</li>
+                            <li>Observe como o clipe agora é reproduzido de trás para frente.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Passo 5: Organização da Timeline</strong></p>
+                <ol>
+                    <li>Tracks de Vídeo e Áudio:
+                        <ul>
+                            <li>Perceba que você tem uma trilha de vídeo (V1) e uma trilha de áudio (A1).</li>
+                            <li>Selecione <code>Clip_A.mp4</code> e arraste-o para cima, para a trilha V2 (se ela
+                                existir ou se for criada automaticamente). Observe como ele agora está em uma camada
+                                acima dos outros clipes. (Volte-o para V1 para este exercício).</li>
+                        </ul>
+                    </li>
+                    <li>Renomear Clipes (no Media Pool):
+                        <ul>
+                            <li>Vá para a página "Media".</li>
+                            <li>Clique com o botão direito em <code>Clip_A.mp4</code> e selecione "Clip Attributes...".
+                            </li>
+                            <li>Na guia "Name", você pode alterar o nome do clipe para algo mais descritivo, como
+                                "Paisagem Montanha". Repita para os outros clipes de vídeo. Isso ajuda muito na
+                                organização de projetos maiores.</li>
+                        </ul>
+                    </li>
+                    <li>Marcadores (Markers):
+                        <ul>
+                            <li>Na timeline, posicione o playhead em um ponto onde o <code>Clip_A.mp4</code> termina e o
+                                <code>Clip_B.mp4</code> começa.</li>
+                            <li>Pressione a tecla <code>M</code> para adicionar um marcador.</li>
+                            <li>Pressione <code>M</code> novamente para abrir o painel de marcadores e adicione uma
+                                descrição como "Início Cena 2".</li>
+                            <li>Faça o mesmo para a transição entre <code>Clip_B.mp4</code> e <code>Clip_C.mp4</code>.
+                            </li>
+                            <li>Os marcadores ajudam a sinalizar pontos importantes na timeline.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="exercicio-pratico">
+                    <h3>Exercício Prático Final:</h3>
+                    <p>Com base no que você aprendeu:</p>
+                    <ol>
+                        <li><strong>Crie uma sequência de vídeo simples</strong> de aproximadamente <strong>30-45
+                                segundos</strong> usando os clipes importados.</li>
+                        <li><strong>Inicie com <code>Clip_A.mp4</code></strong>, ajustando sua duração para cerca de 10
+                            segundos.</li>
+                        <li><strong>Siga com <code>Clip_B.mp4</code></strong>, mas inverta sua velocidade e ajuste a
+                            duração para 8 segundos.</li>
+                        <li><strong>Termine com <code>Clip_C.mp4</code></strong>, aplicando câmera lenta (50%) e
+                            ajustando a duração para 12 segundos.</li>
+                        <li><strong>Ajuste a trilha de áudio</strong> para que ela cubra toda a duração da sua
+                            sequência.</li>
+                        <li><strong>Adicione um marcador</strong> no início de cada clipe na timeline.</li>
+                        <li><strong>Explore a ferramenta "Snap" (ímã)</strong> na timeline (o ícone de ímã na barra de
+                            ferramentas da timeline) para ver como ela ajuda a alinhar os clipes com precisão.</li>
+                    </ol>
+                </div>
+
+
+                <!-- <p>O instrutor circula, auxiliando individualmente.</p> -->
+            </div>
+            <div class="voltar" style="cursor: pointer;" onclick="(window.location='index.html')">
+                <h2>Voltar</h1>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
