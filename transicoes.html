@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url("img/background1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* img{
+            width: 300px;
+            padding-left: 40%;
+        } */
+        .container {
+            /* max-width: 900px; */
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff0707;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/senai.png" alt="" style="width: 300px; cursor: pointer;" onclick="(window.location='index.html')">
+    <div class="container" style="width:80%;">
+        <div class="voltar" style="cursor: pointer;" onclick="(window.location='transicao.html')">
+            <h2>Voltar</h1>
+        </div>
+         
+        <h1>Tutorial: Dicas e Truques de Transições no DaVinci Resolve</h1>
+        
+    
+
+        <h2>1. Mudando a Duração da Transição</h2>
+        <p>Ajustar o tempo de uma transição é fundamental para o ritmo do seu vídeo. Existem três formas fáceis de fazer isso:</p>
+        <ol>
+            <li><strong>Arrastando na Timeline:</strong> Clique na borda da transição na linha do tempo e arraste para a esquerda ou direita para diminuir ou aumentar sua duração.</li>
+            <li><strong>Menu de Contexto:</strong> Clique com o botão direito sobre a transição e selecione a opção <code>Change Transition Duration...</code> ou use o atalho <code>Ctrl + D</code>. Uma janela aparecerá para você digitar a duração exata.</li>
+            <li><strong>Painel Inspector:</strong> Selecione a transição. No canto superior direito, abra o painel <strong>Inspector</strong>. Na aba <strong>Transition</strong>, você pode ajustar o campo <code>Duration</code> com precisão.</li>
+        </ol>
+
+        <h2>2. Corrigindo o Posicionamento da Transição</h2>
+        <p>Às vezes, ao arrastar uma transição, ela se aplica apenas no início ou no final de um clipe, em vez de ficar centralizada entre dois clipes. Para corrigir isso:</p>
+        <ul>
+            <li>Clique com o botão direito na transição mal posicionada.</li>
+            <li>No menu, selecione <strong>Center on Edit</strong> para centralizá-la corretamente entre os dois clipes adjacentes.</li>
+        </ul>
+
+        <h2>3. Entendendo os "Handles" do Vídeo</h2>
+        <p>Se o DaVinci Resolve não permite que você adicione uma transição entre dois clipes, o motivo provável é a falta de "handles".</p>
+        <ul>
+            <li><strong>O que são "Handles"?</strong> São os frames (quadros) extras de um clipe que existem antes do ponto de entrada (In) e depois do ponto de saída (Out) que você definiu. Para que uma transição de 1 segundo funcione, cada clipe precisa ter pelo menos 15 frames "sobrando" (em um projeto de 30fps) para que o software possa sobrepô-los.</li>
+            <li><strong>Como resolver:</strong> Ative o <strong>Trim Edit Mode</strong> (atalho <code>T</code>) e encurte um pouco o final do primeiro clipe e o início do segundo. Isso criará os handles necessários para que a transição possa ser aplicada.</li>
+        </ul>
+
+        <h2>4. Aplicando Transições em Imagens e Texto</h2>
+        <p>As transições não são exclusivas para vídeos! Você pode usá-las para criar animações simples em outros elementos:</p>
+        <ul>
+            <li>Arraste uma transição (como a <code>Push</code>) para o início ou final de uma <strong>imagem</strong> ou de um clipe de <strong>texto</strong> na timeline.</li>
+            <li>Isso cria um efeito de entrada ou saída animado sem a necessidade de usar keyframes, agilizando muito o trabalho.</li>
+        </ul>
+
+        <h2>5. Salvando Suas Transições Personalizadas</h2>
+        <p>Depois de ajustar uma transição com a duração, posicionamento e efeitos perfeitos, você não precisa refazer todo o processo. Salve-a como um preset:</p>
+        <ol>
+            <li>Configure a transição como desejar no painel <strong>Inspector</strong>.</li>
+            <li>Clique com o botão direito sobre a transição configurada na timeline.</li>
+            <li>Selecione <strong>Create Transition Preset</strong>.</li>
+            <li>Dê um nome para sua nova transição. Ela ficará salva na seção <code>User</code> dentro de <strong>Video Transitions</strong>.</li>
+        </ol>
+
+        <h2>6. Definindo uma Transição Padrão (Standard)</h2>
+        <p>Para agilizar ainda mais seu fluxo de trabalho, defina uma transição como padrão para aplicá-la com um simples atalho.</p>
+        <ol>
+            <li>Encontre a transição que você mais usa (pode ser uma nativa ou um preset que você criou).</li>
+            <li>Clique com o botão direito sobre ela e escolha <strong>Set as Standard Transition</strong>. Uma pequena marca vermelha aparecerá ao lado dela.</li>
+            <li>Agora, sempre que você selecionar um ponto de corte na timeline e pressionar o atalho <code>Ctrl + T</code>, essa transição será aplicada automaticamente.</li>
+        </ol>
+        
+        <p class="conclusion">
+            Dominar essas técnicas de transição no DaVinci Resolve vai economizar seu tempo e dar um acabamento muito mais profissional e dinâmico aos seus vídeos. Experimente e veja a diferença!
+        </p>    
+
+
+    </div>
+     <div class="exercise" style="width:80%;">
+         <h1>Atividade Prática: Dominando Transições no DaVinci Resolve</h1>
+        
+        <div class="info-box">
+            <h3>Objetivo da Atividade</h3>
+            <p>O objetivo é criar uma pequena sequência de vídeo para praticar a aplicação e personalização de transições no DaVinci Resolve, utilizando as dicas do tutorial.</p>
+            <p><strong>Habilidades que você irá praticar:</strong></p>
+            <ul>
+                <li>Adicionar e posicionar transições.</li>
+                <li>Ajustar a duração de uma transição de diferentes formas.</li>
+                <li>Aplicar transições em clipes de texto para criar animações.</li>
+                <li>Salvar uma transição personalizada como um preset para uso futuro.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Pré-requisitos</h3>
+            <p>Para realizar esta atividade, você precisará de:</p>
+            <ul>
+                <li>Software DaVinci Resolve instalado.</li>
+                <li><strong>3 clipes de vídeo curtos</strong> (qualquer tema: paisagem, cidade, pessoas, etc.).</li>
+                <li><strong>1 arquivo de imagem</strong> (pode ser um logo ou qualquer imagem simples).</li>
+            </ul>
+        </div>
+
+        <h2>Passo a Passo da Atividade</h2>
+
+        <h3>Parte 1: Preparando o Projeto</h3>
+        <ol>
+            <li>Abra o DaVinci Resolve e crie um novo projeto chamado "Pratica Transicoes".</li>
+            <li>Na aba <strong>Media</strong>, importe seus 3 clipes de vídeo e sua imagem.</li>
+            <li>Vá para a aba <strong>Edit</strong> e arraste os 3 clipes de vídeo para a timeline, um após o outro.</li>
+        </ol>
+
+        <h3>Parte 2: Aplicando e Ajustando a Primeira Transição</h3>
+        <ol>
+            <li>Abra a biblioteca de <strong>Effects</strong> (canto superior esquerdo).</li>
+            <li>Em <strong>Video Transitions</strong>, encontre a transição <code>Cross Dissolve</code> e arraste-a para o ponto de corte entre o primeiro e o segundo clipe.</li>
+            <li><strong>Pratique o ajuste de duração:</strong> Selecione a transição. Vá até o <strong>Inspector</strong> (canto superior direito) e mude o campo <code>Duration</code> para <strong>2.000 segundos</strong>. Observe como a transição se alonga na timeline.</li>
+            <li><strong>Pratique o posicionamento:</strong> Clique com o botão direito na transição e mude o alinhamento para <code>End on Edit</code>. Depois, clique novamente e retorne para <code>Center on Edit</code> para ver a diferença.</li>
+        </ol>
+
+        <h3>Parte 3: Animando Texto com Transições</h3>
+        <ol>
+            <li>No painel de <strong>Effects</strong>, vá para <strong>Titles > Text+</strong>.</li>
+            <li>Arraste o <code>Text+</code> para uma trilha de vídeo acima do seu terceiro clipe.</li>
+            <li>No <strong>Inspector</strong>, altere o texto para algo como "Minha Edição".</li>
+            <li>Agora, em <strong>Video Transitions</strong>, encontre a transição <code>Push</code> (dentro da categoria Motion).</li>
+            <li>Arraste a transição <code>Push</code> para o <strong>início</strong> do clipe de texto. Dê play e veja o texto entrar na tela com uma animação!</li>
+        </ol>
+
+        <h3>Parte 4: Criando e Salvando um Preset Personalizado</h3>
+        <ol>
+            <li>Arraste a transição <code>Blur Dissolve</code> para o ponto de corte entre o segundo e o terceiro clipe de vídeo.</li>
+            <li>Selecione esta nova transição. No <strong>Inspector</strong>, vá até a opção <code>Ease</code> e mude de <code>None</code> para <code>In & Out</code>. Isso tornará o movimento mais suave.</li>
+            <li>Agora que você a personalizou, clique com o botão direito sobre a transição <code>Blur Dissolve</code> na timeline.</li>
+            <li>Selecione a opção <strong>Create Transition Preset</strong>.</li>
+            <li>Dê um nome para ela, como "Meu Dissolve Suave", e clique em OK.</li>
+            <li>Procure sua nova transição! Ela estará salva na categoria <strong>User</strong> dentro de <strong>Video Transitions</strong>.</li>
+        </ol>
+
+        <div class="challenge-box">
+            <h3>🏆 Desafio Extra!</h3>
+            <p>Se você se sentir confortável com os passos acima, tente este desafio:</p>
+            <ol>
+                <li>Delete a transição <code>Push</code> do seu clipe de texto. Em vez dela, aplique o seu novo preset <strong>"Meu Dissolve Suave"</strong> no início e no final do clipe de texto.</li>
+                <li>Clique com o botão direito no seu preset "Meu Dissolve Suave" na biblioteca de efeitos e selecione <strong>Set as Standard Transition</strong>. Agora, vá até um dos cortes na timeline que não tem transição, selecione-o e use o atalho <code>Ctrl + T</code>. Sua transição padrão será aplicada instantaneamente!</li>
+            </ol>
+
+     </div>
+</body>
+
+</html>
