@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url("img/background1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* img{
+            width: 300px;
+            padding-left: 40%;
+        } */
+        .container {
+            /* max-width: 900px; */
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+        .example {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/senai.png" alt="" style="width: 300px; cursor: pointer;" onclick="(window.location='index.html')">
+    <div class="container" style="width:80%;">
+        <div class="voltar" style="cursor: pointer;" onclick="(window.location='index.html')">
+            <h2>Voltar</h1>
+        </div>
+        <h1>Guia Completo de Edição de Áudio no DaVinci Resolve</h1>
+
+        <div class="section">
+             <div class="section">
+            <h2>Introdução à Edição de Áudio na Fairlight</h2>
+            <p>O DaVinci Resolve oferece uma suíte completa de edição e mixagem de áudio chamada Fairlight. Esta página dedicada fornece todas as ferramentas necessárias para editar, mixar e masterizar o áudio do seu projeto, desde ajustes básicos de volume até o uso de efeitos complexos e automação.</p>
+        </div>
+
+        <div class="section">
+            <h2>Fluxo de Trabalho Básico de Edição de Áudio</h2>
+            <p>Um fluxo de trabalho de edição de áudio eficiente no DaVinci Resolve geralmente segue estas etapas:</p>
+            <ol>
+                <li><strong>Importação de Mídia:</strong> Arraste e solte seus arquivos de áudio diretamente na aba "Media" ou use o menu <code>File > Import > Media</code>.</li>
+                <li><strong>Organização na Timeline:</strong> Crie uma nova timeline e adicione suas trilhas de áudio. É uma boa prática organizar diferentes tipos de áudio em trilhas separadas, como diálogos, música de fundo e efeitos sonoros. Renomear as trilhas ajuda a manter seu projeto organizado.</li>
+                <li><strong>Edição e Cortes:</strong> Utilize ferramentas como a "Blade" (lâmina) para cortar e remover partes indesejadas do áudio. O zoom na timeline permite fazer cortes precisos.</li>
+                <li><strong>Ajuste de Níveis:</strong> Equilibre os níveis de áudio para garantir que o diálogo seja claro e que a música e os efeitos sonoros não o sobreponham. Isso pode ser feito usando o painel "Inspector" ou o "Mixer".</li>
+                <li><strong>Adição de Efeitos e Transições:</strong> Aplique efeitos para aprimorar a qualidade do áudio e use transições para suavizar a passagem entre diferentes clipes de áudio.</li>
+                <li><strong>Mixagem e Masterização:</strong> A etapa final envolve a mixagem de todas as trilhas de áudio para criar uma trilha sonora coesa e a masterização para garantir que o áudio soe bem em diferentes sistemas de reprodução.</li>
+            </ol>
+            <div class="example">
+                <h3>Exemplo Prático: Organizando o Projeto</h3>
+                <p><strong>Tarefa:</strong> Importe um arquivo de voz (diálogo) e um arquivo de música. Na página Fairlight, renomeie a "Audio 1" para "Diálogos" e a "Audio 2" para "Música". Coloque o clipe de voz na trilha "Diálogos" e o clipe de música na trilha "Música".</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Trabalhando com Transições de Áudio</h2>
+            <p>As transições de áudio são essenciais para criar uma experiência auditiva suave e profissional, evitando cortes abruptos e cliques.</p>
+
+            <h3>Fades (Aparecimento e Desvanecimento)</h3>
+            <p>Os fades são usados para aumentar ou diminuir gradualmente o volume de um clipe de áudio. Você pode criá-los arrastando os pequenos manipuladores brancos nos cantos superiores de um clipe de áudio.</p>
+            <div class="example">
+                <h3>Exemplo Prático: Aplicando Fades</h3>
+                <p><strong>Tarefa:</strong> Pegue um clipe de música com duração de 15 segundos. Crie um <strong>fade-in de 3 segundos</strong> no início, arrastando o manipulador do canto superior esquerdo. Depois, crie um <strong>fade-out de 4 segundos</strong> no final, arrastando o manipulador do canto superior direito.</p>
+            </div>
+
+            <h3>Crossfades (Transições Cruzadas)</h3>
+            <p>Crossfades são usados para criar uma transição suave entre dois clipes de áudio adjacentes. A forma mais fácil é selecionar a junção entre dois clipes e usar o atalho <code>Ctrl+T</code> (Windows) ou <code>Cmd+T</code> (Mac) para aplicar a transição padrão.</p>
+             <div class="example">
+                <h3>Exemplo Prático: Aplicando um Crossfade</h3>
+                <p><strong>Tarefa:</strong> Coloque dois clipes de efeitos sonoros diferentes um após o outro na mesma trilha (ex: som de vento seguido por som de trovão). A transição entre eles será abrupta. Selecione a junção entre os dois clipes e aplique um <strong>crossfade de 1 segundo</strong> para suavizar a passagem de um som para o outro.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Utilizando Efeitos de Áudio (Fairlight FX)</h2>
+            <p>O DaVinci Resolve inclui uma vasta gama de efeitos de áudio, conhecidos como Fairlight FX, para aprimorar e corrigir seu áudio. Eles podem ser aplicados a clipes individuais ou a trilhas inteiras através da "Effects Library" ou do painel "Mixer".</p>
+
+            <h3>Equalizador (EQ)</h3>
+            <p>O Equalizador permite ajustar o balanço de frequências em seu áudio. Cada trilha no mixer da Fairlight possui um equalizador paramétrico de 4 bandas integrado.</p>
+            <div class="example">
+                <h3>Exemplo Prático: Limpando um Diálogo com EQ</h3>
+                <p><strong>Tarefa:</strong> Use um clipe de diálogo. No Mixer, dê um duplo clique na área de EQ da trilha de diálogo para abrir o equalizador.</p>
+                <ol>
+                    <li>Ative a <strong>Banda 1 (Filtro Passa-Altas)</strong> e arraste a frequência para cerca de <strong>80-100Hz</strong>. Isso removerá ruídos graves de fundo (como zumbido de ar condicionado) sem afetar a voz.</li>
+                    <li>Dê um leve aumento de 2-3 dB na <strong>Banda 3 ou 4</strong> em torno de <strong>2-5kHz</strong> para dar mais presença e clareza à voz.</li>
+                </ol>
+            </div>
+
+            <h3>Compressão</h3>
+            <p>A compressão ajuda a nivelar o volume do áudio, tornando as partes mais altas mais silenciosas e as partes mais silenciosas mais altas. Isso resulta em um som mais consistente.</p>
+             <div class="example">
+                <h3>Exemplo Prático: Nivelando a Voz com um Compressor</h3>
+                <p><strong>Tarefa:</strong> Em um clipe de diálogo onde a pessoa fala alto e baixo, vá para a seção "Dynamics" no mixer e ative o compressor.</p>
+                <ol>
+                    <li>Defina o <strong>Ratio (Taxa)</strong> para <strong>3:1</strong>.</li>
+                    <li>Baixe o <strong>Threshold (Limiar)</strong> até que, nas partes mais altas do diálogo, o medidor de redução de ganho (GR) mostre entre -3dB e -6dB de compressão.</li>
+                    <li>Aumente o <strong>Makeup Gain</strong> para compensar a perda de volume geral. Compare o áudio com e sem o compressor para notar a diferença na consistência.</li>
+                </ol>
+            </div>
+
+            <h3>Redução de Ruído (Noise Reduction)</h3>
+            <p>O DaVinci Resolve (versão Studio) oferece uma poderosa ferramenta de redução de ruído para limpar áudio com ruído de fundo.</p>
+            <div class="example">
+                <h3>Exemplo Prático: Removendo Ruído de Fundo</h3>
+                <p><strong>Tarefa:</strong> Pegue um clipe de áudio com um chiado ou zumbido constante no fundo. Na "Effects Library", encontre o efeito "Noise Reduction" e aplique-o na trilha.</p>
+                <ol>
+                    <li>Selecione o modo <strong>"Auto Speech Mode"</strong> e ajuste o controle de "Dry/Wet" para encontrar um bom equilíbrio entre a remoção de ruído e a preservação da qualidade da voz.</li>
+                    <li><strong>(Alternativa Manual)</strong> Encontre um trecho de 1-2 segundos que contenha apenas o ruído, ative o modo manual e clique em <strong>"Learn" (Aprender)</strong>. O plugin irá analisar e remover esse padrão de ruído de todo o clipe.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>Exercício Final em Sala de Aula</h2>
+            <p><strong>Objetivo:</strong> Criar uma pequena cena de áudio de 30 segundos, mixando diálogo, música de
+                fundo e efeitos sonoros, utilizando as técnicas aprendidas.</p>
+            <p><strong>Materiais Necessários (fornecidos pelo instrutor):</strong></p>
+            <ul>
+                <li>1 clipe de diálogo (ex: "Está uma noite escura e tempestuosa... tenho que encontrar abrigo.")</li>
+                <li>1 clipe de música de suspense.</li>
+                <li>1 clipe de efeito sonoro de chuva e vento.</li>
+                <li>1 clipe de efeito sonoro de passos na lama.</li>
+                <li>1 clipe de efeito sonoro de um trovão.</li>
+            </ul>
+            <hr>
+            <h4>Passo a Passo:</h4>
+            <ol>
+                <li><strong>Organização:</strong> Crie 4 trilhas de áudio e renomeie-as para "Diálogo", "Música",
+                    "Ambiente" e "SFX" (Efeitos Sonoros).</li>
+                <li><strong>Ambiente:</strong> Coloque o efeito de chuva e vento na trilha "Ambiente". Ajuste o clipe
+                    para durar os 30 segundos completos da cena.</li>
+                <li><strong>Diálogo:</strong> Adicione o clipe de diálogo na trilha "Diálogo", por volta dos 5 segundos.
+                    Use o <strong>Equalizador (EQ)</strong> para cortar frequências abaixo de 90Hz e o
+                    <strong>Compressor</strong> para nivelar o volume da voz.</li>
+                <li><strong>Música:</strong> Insira a música de suspense na trilha "Música". Crie um
+                    <strong>fade-in</strong> suave no início. O volume da música deve ser baixo o suficiente para não
+                    competir com o diálogo.</li>
+                <li><strong>Efeitos Sonoros (SFX):</strong>
+                    <ul>
+                        <li>Coloque os passos na lama na trilha "SFX" para que comecem um pouco antes do diálogo.</li>
+                        <li>Coloque o som do trovão na trilha "SFX" para que ele toque logo após a pessoa terminar de
+                            falar. Use o <strong>mixer</strong> para garantir que o trovão seja o som mais alto da cena,
+                            mas sem distorcer.</li>
+                    </ul>
+                </li>
+                <li><strong>Mixagem Final:</strong> Usando os <strong>faders de volume</strong> no mixer, ajuste os
+                    níveis de todas as trilhas para criar uma mixagem equilibrada. O diálogo deve ser perfeitamente
+                    claro, a música deve criar o clima, e os efeitos sonoros devem parecer realistas no ambiente.</li>
+                <li><strong>Finalização:</strong> Adicione um <strong>fade-out</strong> geral na trilha de música e na
+                    de ambiente nos últimos 3 segundos para encerrar a cena suavemente.</li>
+            </ol>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
