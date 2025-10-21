@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Curso: Editor de Vídeo (Videomaker)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url("img/background1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* img{
+            width: 300px;
+            padding-left: 40%;
+        } */
+        .container {
+            /* max-width: 900px; */
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ff2e2e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #ff2e2e;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff2e2e;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        p {
+            text-align: justify;
+            padding: 20px;
+            line-height: 1.5cap;
+        }
+
+        .part-section {
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            background-color: #e9f7ff;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .part-section h4 {
+            color: #0056b3;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .materials {
+            background-color: #e2f0e0;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        .materials h2 {
+            color: #28a745;
+            border-bottom: 1px solid #a2d4ac;
+        }
+
+        .day-section {
+            background-color: #024c7725;
+            border-left: 5px solid #ff2e2e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .week-section {
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+
+        .atividade {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/senai.png" alt="" style="width: 300px; cursor: pointer;" onclick="(window.location='index.html')">
+    <div class="container" style="width:80%;">
+        <div class="voltar" style="cursor: pointer;" onclick="(window.location='index.html')">
+            <h2>Voltar</h1>
+        </div>
+        
+            <h1>Efeitos de Vídeo e Animação com Keyframes</h1>
+            <p>Agora que você já sabe montar uma sequência, é hora de dar vida e movimento a ela. Os efeitos de vídeo,
+                quando usados com propósito, podem corrigir problemas, criar um estilo único e, o mais importante,
+                servir à narrativa. E a chave para controlar tudo isso está em uma única palavra:
+                <strong>keyframes</strong>.</p>            
+                <p>Você pode até falhar nos efeitos visuais se a sua intenção não é necessariamente enganar o público.</p>
+            <p>Essa fala do Gaveta nos lembra que o mais importante é a <strong>intenção</strong>. Um efeito "tosco"
+                pode ser genial se a intenção for cômica, mas um efeito mal executado em uma cena séria pode tirar o
+                espectador do filme. Vamos aprender a fazer do jeito certo.</p>
+<div class="part-section">
+            <h3>1. Aplicando Efeitos de Vídeo</h3>
+            <p><strong>Teoria:</strong> O DaVinci Resolve vem com uma vasta biblioteca de efeitos (chamados de OpenFX).
+                Eles podem ser usados para tudo: estabilizar uma imagem tremida, criar um desfoque para destacar um
+                objeto, adicionar um brilho (glow) para dar um ar de sonho, entre outras infinitas possibilidades. O
+                segredo é não exagerar. Cada efeito deve ter um porquê.</p>
+            <p><strong>Prática:</strong></p>
+            <ol>
+                <li>Com um clipe na sua timeline, certifique-se de que o painel <strong>"Effects Library"</strong>
+                    esteja aberto no canto superior esquerdo.</li>
+                <li>Dentro da biblioteca, procure pela seção <strong>"OpenFX"</strong>. Você verá diversas categorias
+                    como "Blur" (Desfoque), "ResolveFX Stylize", etc.</li>
+                <li>Escolha um efeito, como o <strong>"Gaussian Blur"</strong> dentro da categoria "Blur", e arraste-o
+                    diretamente para cima do clipe na timeline.</li>
+                <li>Com o clipe selecionado, abra o <strong>"Inspector"</strong> no canto superior direito. Você verá
+                    uma nova aba chamada <strong>"Effects"</strong>. É ali que você controla todos os parâmetros do
+                    efeito que acabou de aplicar.</li>
+            </ol>
+
+            <h3>2. Entendendo os Keyframes: O Poder de Animar Tudo</h3>
+            <p><strong>Teoria:</strong> Keyframes são a alma da animação digital. Pense neles como se estivesse dando
+                coordenadas para o DaVinci Resolve. Você diz:</p>
+            <ul>
+                <li>"No <strong>segundo 1</strong>, quero que este clipe esteja na <strong>posição X</strong>."</li>
+                <li>"No <strong>segundo 5</strong>, quero que ele esteja na <strong>posição Y</strong>."</li>
+            </ul>
+            <p>O software automaticamente calcula e cria todo o movimento suave entre esses dois pontos. Isso vale para
+                praticamente qualquer parâmetro: posição, zoom (escala), rotação, opacidade e até mesmo os parâmetros
+                dos efeitos que você aplicou!</p>
+            <p>No "Inspector", qualquer parâmetro que tiver um pequeno ícone de losango <span
+                    class="keyframe-icon"></span> ao lado pode ser animado. Quando você clica nesse ícone, ele fica
+                vermelho <span class="keyframe-icon active"></span>, indicando que um keyframe foi criado naquele ponto
+                do tempo.</p>
+        </div>
+        <div class="materials">
+            <h3>Exemplo Prático: Animando um Título Simples</h3>
+            <p>Vamos criar um título que desliza para a tela.</p>
+            <div class="code-block">
+                <ol>
+                    <li>Vá em <strong>Effects Library > Titles > Text+</strong> e arraste para a sua timeline.</li>
+                    <li>Selecione o clipe de texto e vá para o <strong>Inspector</strong>.</li>
+                    <li>Mova o <strong>playhead</strong> para o momento em que você quer que o texto <strong>esteja
+                            parado</strong> na tela (ex: 1 segundo depois do início do clipe).</li>
+                    <li>Na aba "Video" do Inspector, encontre o parâmetro <strong>Position</strong>. Clique no ícone de
+                        losango <span class="keyframe-icon"></span> ao lado dele para criar o primeiro keyframe. Ele
+                        ficará vermelho.</li>
+                    <li>Agora, arraste o <strong>playhead</strong> de volta para o início do clipe (frame 0).</li>
+                    <li>Altere o valor de "Position X" (o primeiro número) até que o texto saia completamente da tela
+                        pela esquerda. Note que o Resolve criou um segundo keyframe automaticamente!</li>
+                    <li>Dê play. Você acabou de criar sua primeira animação!</li>
+                </ol>
+            </div>
+
+
+        </div>
+
+        <div class="exercise">
+            <h3>Atividade Prática: O Zoom Dramático e o Foco Narrativo</h3>
+            <p>Vamos usar keyframes para guiar o olhar do espectador, uma das técnicas mais poderosas da edição.</p>
+            <ol>
+                <li>Escolha um clipe de vídeo estático (sem movimento de câmera) ou uma foto em alta resolução e
+                    coloque na timeline. Dê a ele uns 10 segundos de duração.</li>
+                <li><strong>O Objetivo:</strong> Fazer um zoom lento em um detalhe específico da imagem, criando
+                    suspense ou destacando sua importância.</li>
+                <li><strong>Passo a Passo:</strong>
+                    <ul>
+                        <li>Selecione o clipe e vá ao <strong>Inspector</strong>.</li>
+                        <li>Posicione o playhead no início do clipe.</li>
+                        <li>Na aba "Video", clique no losango <span class="keyframe-icon"></span> ao lado de
+                            <strong>"Zoom"</strong> e <strong>"Position"</strong> para criar os keyframes iniciais.
+                        </li>
+                        <li>Agora, mova o playhead para o final do clipe.</li>
+                        <li>Aumente o valor do <strong>"Zoom"</strong> (ex: de 1.000 para 1.200).</li>
+                        <li>Ajuste os valores de <strong>"Position" (X e Y)</strong> para centralizar o detalhe que
+                            você quer destacar.</li>
+                        <li>Assista ao resultado. Você criou um movimento suave que direciona a atenção do público
+                            exatamente para onde você queria.</li>
+                    </ul>
+                </li>
+                <li><strong>Reflexão:</strong> Pense na sua intenção. Esse zoom serviu para criar suspense? Para
+                    revelar uma informação? Para mostrar a emoção no rosto de um personagem? A técnica é simples,
+                    mas o poder narrativo é imenso.</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+
+</html>
